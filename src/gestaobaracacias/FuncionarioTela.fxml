@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stckPane_conteiner_funcionarios" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1424.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestaobaracacias.FuncionarioTelaController">
+   <children>
+      <AnchorPane prefHeight="767.0" prefWidth="1383.0">
+         <children>
+            <Pane layoutX="54.0" layoutY="6.0" opacity="0.7" prefHeight="727.0" prefWidth="411.0" AnchorPane.leftAnchor="54.0">
+               <children>
+                  <Pane layoutX="25.0" layoutY="120.0" prefHeight="560.0" prefWidth="350.0">
+                     <children>
+                        <TextField fx:id="funcionario_nome" layoutX="136.0" layoutY="64.0" minWidth="200.0" onMouseEntered="#realceCampoNome" onMouseExited="#realceCampoNome_ext" prefWidth="200.0" promptText="Por favor insira o nome" style="-fx-border-color: #c5c3c3;" />
+                        <Label layoutX="19.0" layoutY="70.0" text="Nome">
+                           <font>
+                              <Font name="Algerian" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="funcionario_bilheteIdent" layoutX="135.0" layoutY="109.0" minWidth="200.0" onMouseEntered="#realceCampo_bilheteIdent" onMouseExited="#realceCampo_bilheteIdent_ext" prefWidth="200.0" promptText="Por favor insira o número do BI" style="-fx-border-color: #00#c5c3c30;" />
+                        <Label layoutX="19.0" layoutY="115.0" prefHeight="15.0" prefWidth="116.0" text="BILHETE IDENTIDADE">
+                           <font>
+                              <Font name="Algerian" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="17.0" layoutY="158.0" text="Data Nascimento">
+                           <font>
+                              <Font name="Algerian" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="funcionario_endereco" layoutX="136.0" layoutY="195.0" minWidth="200.0" onMouseEntered="#realceCampo_endereco" onMouseExited="#realceCampo_endereco_ext" prefWidth="200.0" promptText="Endereço" style="-fx-border-color: #c5c3c3;" />
+                        <Label layoutX="18.0" layoutY="201.0" text="Endereço">
+                           <font>
+                              <Font name="Algerian" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="funcionario_telefone1" layoutX="135.0" layoutY="240.0" minWidth="200.0" onMouseEntered="#realceCampo_telefone1" onMouseExited="#realceCampo_telefone1_ext" prefWidth="200.0" promptText="Número de telefone 2" style="-fx-border-color: #c5c3c3;" />
+                        <Label layoutX="17.0" layoutY="246.0" text="Telefone 1">
+                           <font>
+                              <Font name="Algerian" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="funcionario_salario" layoutX="133.0" layoutY="358.0" minWidth="200.0" onMouseEntered="#realceCampoSalario" onMouseExited="#realceCampoSalario_ext" prefWidth="200.0" promptText="Valor do salário do funcionario" style="-fx-border-color: #c5c3c3;" />
+                        <Label layoutX="17.0" layoutY="358.0" text="SALÁRIO">
+                           <font>
+                              <Font name="Algerian" size="13.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="funcionario_data_nasc" layoutX="136.0" layoutY="153.0" onMouseEntered="#realceCampo_dataNasc" onMouseExited="#realceCampo_dataNasc_ext" prefHeight="25.0" prefWidth="200.0" promptText="Data de nascimento" style="-fx-border-radius: 10;" />
+                        <TextField fx:id="funcionario_telefone2" layoutX="134.0" layoutY="283.0" minWidth="200.0" onMouseEntered="#realceCampo_telefone2" onMouseExited="#realceCampo_telefone2_ext" prefWidth="200.0" promptText="Número de telefone 2 (Opcional)" style="-fx-border-color: #c5c3c3;" />
+                        <Label layoutX="16.0" layoutY="289.0" prefHeight="15.0" prefWidth="88.0" text="Telefone 2">
+                           <font>
+                              <Font name="Algerian" size="13.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="-3.0" layoutY="385.0" prefHeight="80.0" prefWidth="357.0">
+                           <children>
+                              <Button layoutX="6.0" layoutY="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #09e2a7;" text="Adicionar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Algerian" size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="93.0" layoutY="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #09e2a7;" text="Atualizar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Algerian" size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="182.0" layoutY="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #09e2a7;" text="Apagar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Algerian" size="11.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="271.0" layoutY="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #09e2a7;" text="Limpar" textFill="WHITE">
+                                 <font>
+                                    <Font name="Algerian" size="11.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Button fx:id="pane_btn_voltar" layoutX="91.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#voltarBtn" onMouseEntered="#mouse_hover_btn_voltar" onMouseExited="#mouse_exit_btn_voltar" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #56e558;" text="Voltar" textFill="WHITE">
+                           <font>
+                              <Font name="Algerian" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="pane_btn_fechar" layoutX="180.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#fechar" onMouseEntered="#mouse_hover_btn_fechar" onMouseExited="#mouse_exit_btn_fechar" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #f00606;" text="Fechar" textFill="WHITE">
+                           <font>
+                              <Font name="Algerian" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="19.0" layoutY="18.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: #09e2a7;" text="Procurar" textFill="WHITE">
+                           <font>
+                              <Font name="Algerian" size="11.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="funcionario_idPesquisa" layoutX="138.0" layoutY="17.0" minWidth="200.0" onMouseEntered="#realceCampo_idPesquisa" onMouseExited="#realceCampo_idPesquisa_ext" prefWidth="200.0" promptText="Pesquisa por número de funcionario" style="-fx-border-color: #c5c3c3;" />
+                        <ComboBox layoutX="133.0" layoutY="319.0" prefWidth="200.0" promptText="Cargo" />
+                        <Label layoutX="16.0" layoutY="324.0" prefHeight="15.0" prefWidth="88.0" text="Cargo">
+                           <font>
+                              <Font name="Algerian" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Text layoutX="116.0" layoutY="61.0" lineSpacing="1.0" strokeWidth="0.0" text="Bar Acácias" textAlignment="CENTER" wrappingWidth="167.6666603088379">
+                     <font>
+                        <Font name="Algerian" size="37.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="381.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FUNCIONÁRIOS" textAlignment="CENTER" wrappingWidth="11.0">
+                     <font>
+                        <Font name="Algerian" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <TreeTableView layoutX="465.0" prefHeight="741.0" prefWidth="960.0" AnchorPane.rightAnchor="-1.0">
+              <columns>
+                <TreeTableColumn prefWidth="75.0" text="C1" />
+                <TreeTableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TreeTableView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
